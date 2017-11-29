@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* wszystkie elementy odziedziczą wartość właściwości box-sizing po elemencie body ( border-box) */
+}
+
+html {
+  font-size: 62.5%; /* default value of 1 rem = 10px podzielone przez 16px */
+}
+
+body {
+  box-sizing: border-box;
+}
