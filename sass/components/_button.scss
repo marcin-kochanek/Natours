@@ -52,3 +52,28 @@
     animation-fill-mode: backwards; /* LIFEHACK: rozwiązanie dla pojawiającego się buttona przed rozpoczęciem animacji. Opóźnienie animacji rozpoczynie się przed jej wyświetleniem */
   }
 }
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    display: inline-block;
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 5px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .1);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+  }
+}
