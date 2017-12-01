@@ -16,8 +16,8 @@
       </div>
       <div class="header__text-box">
         <h1 class="heading-primary">
-          <span class="heading-primary--main">Outdoors</span>
-          <span class="heading-primary--sub">is where life happens</span>
+          <span class="heading-primary--main" data-end="s">Outdoor</span>
+          <span class="heading-primary--sub" data-end="s">is where life happen</span>
         </h1>
         <a class="btn btn--white btn--animated" href="#">Discover our tours</a>
       </div>
@@ -269,8 +269,39 @@
       <section class="section-booking">
         <div class="row">
           <div class="book">
-            <div class="col-1-of-2"></div>
-            <div class="col-1-of-2"></div>
+            <div class="book__form">
+              <div class="u-margin-bottom-medium">
+                <h2 class="heading-secondary">
+                  Start booking now
+                </h2>
+              </div>
+              <form action="#" class="form">
+                <fieldset class="form__group">
+                  <input type="text" placeholder="Full name" class="form__input--text" id="name" required>
+                  <label for="name" class="form__label--text">
+                    Full name
+                  </label>
+                  <input type="email" placeholder="E-mail address" class="form__input--text u-margin-top-small" id="email" required>
+                  <label for="email" class="form__label--text">
+                    E-mail address
+                  </label>
+                  <div class="form__group-radio">
+                    <input type="radio" class="form__input--radio" id="small" name="group-size" value="small">
+                    <label for="small" class="form__label--radio">
+                      <span class="form__button-radio"></span>
+                      Small tour group
+                    </label>
+                  </div>
+                  <div class="form__group-radio">
+                    <input type="radio" class="form__input--radio" id="large" name="group-size" value="large">
+                    <label for="large" class="form__label--radio">
+                      <span class="form__button-radio"></span>
+                      Large tour group
+                    </label>
+                  </div>
+                </fieldset
+              </form>
+            </div>
           </div>
         </div>
       </section>
