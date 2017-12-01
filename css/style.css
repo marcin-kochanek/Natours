@@ -104,48 +104,73 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
-.btn:link, .btn:visited {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  position: relative; }
+.u-margin-top-huge {
+  margin-top: 10rem; }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
+.u-margin-top-big {
+  margin-top: 8rem; }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
+.u-margin-top-medium {
+  margin-top: 4rem; }
 
-.btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+.u-margin-top-small {
+  margin-top: 1.5rem; }
 
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
-
-.btn--animated {
-  animation: moveInBottom 1.5s .2s;
-  animation-fill-mode: backwards;
-  /* LIFEHACK: rozwiązanie dla pojawiającego się buttona przed rozpoczęciem animacji. Opóźnienie animacji rozpoczynie się przed jej wyświetleniem */ }
+.btn {
+  font-size: 1.4rem; }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all .4s;
+    transition: all .4s; }
+  .btn:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    -webkit-box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn--green::after {
+      background-color: #55c57a; }
+  .btn--animated {
+    -webkit-animation: moveInBottom 1.5s .2s;
+    animation: moveInBottom 1.5s .2s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    /* LIFEHACK: rozwiązanie dla pojawiającego się buttona przed rozpoczęciem animacji. Opóźnienie animacji rozpoczynie się przed jej wyświetleniem */ }
 
 .btn-text:link, .btn-text:visited {
   font-size: 16px;
@@ -154,16 +179,21 @@ body {
   text-decoration: none;
   border-bottom: 1px solid #55c57a;
   padding: 5px;
+  -webkit-transition: all .2s;
   transition: all .2s; }
 
 .btn-text:hover {
   color: #fff;
   background-color: #55c57a;
+  -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
 
 .btn-text:active {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
 
 .composition {
@@ -319,6 +349,80 @@ body {
     font-size: 6rem;
     font-weight: 200; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 9rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  -webkit-transform: skewX(-12deg);
+  transform: skewX(-12deg); }
+  .story__shape {
+    height: 15rem;
+    width: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__picture {
+    height: 100%;
+    -webkit-transform: translateX(-4rem) scale(1.4);
+    transform: translateX(-4rem) scale(1.4);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 20%);
+    transform: translate(-50%, 20%);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .story:hover .story__picture {
+    -webkit-filter: blur(0.5rem) brightness(70%);
+    filter: blur(0.5rem) brightness(70%);
+    -webkit-transform: translateX(-4rem) scale(1.1);
+    transform: translateX(-4rem) scale(1.1); }
+  .story__text {
+    -webkit-transform: skewX(12deg);
+    transform: skewX(12deg); }
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .25;
+  overflow: hidden; }
+  .background-video__content {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -373,14 +477,34 @@ body {
 
 .section-features {
   padding: 20rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
+  -webkit-transform: skewY(-6deg);
   transform: skewY(-6deg);
   margin-top: -7rem; }
   .section-features > * {
+    -webkit-transform: skewY(6deg);
     transform: skewY(6deg); }
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 20rem 0;
+  padding: 20rem 0 10rem;
   margin-top: -7rem; }
+
+.section-stories {
+  padding: 10rem 0 10rem;
+  position: relative; }
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+
+.book {
+  background-image: url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 50rem; }

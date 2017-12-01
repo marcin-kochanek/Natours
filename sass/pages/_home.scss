@@ -7,23 +7,62 @@
 .section-features {
   padding: 20rem 0;
   background-image:
+    -webkit-gradient(
+      linear,
+      left top, right bottom,
+      from(rgba($color-primary-light, .8)),
+      to(rgba($color-primary-dark, .8))),
+    url(../img/nat-4.jpg);
+  background-image:
     linear-gradient(
       to right bottom,
       rgba($color-primary-light, .8),
       rgba($color-primary-dark, .8)),
     url(../img/nat-4.jpg);
     background-size: cover;
-    transform: skewY(-6deg);
+    -webkit-transform: skewY(-6deg);
+            transform: skewY(-6deg);
     //clip-path: polygon(0 calc(25vh - 3rem), 100% 0, 100% 100%, 0 100%);
 
     & > * {
-      transform: skewY(6deg);
+      -webkit-transform: skewY(6deg);
+              transform: skewY(6deg);
     }
     margin-top: -7rem;
 }
 
 .section-tours {
   background-color: $color-grey-light-1;
-  padding: 20rem 0;
+  padding: 20rem 0 10rem;
   margin-top: -7rem;
+}
+
+.section-stories {
+  padding: 10rem 0 10rem;
+  position: relative;
+}
+
+.section-booking {
+  padding: 15rem 0;
+  background-image:
+    -webkit-gradient(
+      linear,
+      left top, right bottom,
+      from(rgba($color-primary-light, .8)),
+      to(rgba($color-primary-dark, .8)));
+  background-image:
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, .8),
+      rgba($color-primary-dark, .8));
+}
+
+.book {
+  background-image: url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+          box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+  height: 50rem
 }
