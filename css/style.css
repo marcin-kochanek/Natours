@@ -57,18 +57,21 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
   .heading-primary--main {
     display: block;
     font-size: 4.5rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
+    -webkit-animation: moveInLeft 1.5s;
     animation: moveInLeft 1.5s; }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 1.35rem;
+    -webkit-animation: moveInRight 1.5s;
     animation: moveInRight 1.5s;
     margin-bottom: 5rem; }
 
@@ -77,6 +80,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
@@ -425,10 +429,12 @@ body {
 
 .header {
   height: 95vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
@@ -440,9 +446,10 @@ body {
     position: absolute;
     top: 45%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    /* wyśrodkowanie dla łącza (buttona), który ma wartość display'u usatwioną na inline-block */ }
+    /* wyśrodkowanie dla łącza (buttona), który ma wartość display'u ustawioną na inline-block */ }
 
 .row {
   max-width: 114rem;
