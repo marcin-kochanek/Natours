@@ -128,13 +128,15 @@ body {
 
 .btn {
   font-size: 1.4rem; }
-  .btn:link, .btn:visited {
+  .btn, .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    position: relative; }
+    position: relative;
+    cursor: pointer;
+    border: none; }
   .btn::after {
     content: "";
     display: inline-block;
@@ -156,7 +158,8 @@ body {
       -webkit-transform: scaleX(1.4) scaleY(1.6);
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
-  .btn:active {
+  .btn:active, .btn:focus {
+    outline: none;
     -webkit-transform: translateY(1px);
     transform: translateY(1px);
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -598,8 +601,7 @@ body {
   background-size: cover;
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   .book__form {
     padding: 6rem;
     width: 65%;
