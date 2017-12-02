@@ -1,0 +1,86 @@
+.footer {
+  background-color: $color-grey-dark-3;
+  padding: 8rem;
+  font-size: 1.4rem;
+  color: $color-grey-light-1;
+  letter-spacing: 1.5px;
+
+  &__logo-box {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__logo {
+    width: 10rem;
+    height: auto;
+  }
+
+  &__navigation {
+    display: inline-block;
+    border-top: 1px solid $color-grey-dark-1;
+    padding-top: .5rem;
+
+    &--social {
+      float: right;
+    }
+  }
+  &__list {
+    list-style: none;
+    text-align: right;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    letter-spacing: 1.5px;
+    -webkit-transition: -webkit-box-shadow .15s;
+    -webkit-transition: all .15s;
+    transition: all .15s;
+    color: $color-grey-dark-2;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &-menu {
+      font-size: 1.2rem;
+
+      &:hover,
+      &:active {
+        color: $color-primary;
+        -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+                box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+      }
+    }
+
+    &-social {
+      font-size: 2.3rem;
+      text-align: center;
+
+      &--t:hover {
+        color: #4099FF;
+      }
+
+      &--fb:hover {
+        color: #3B5998;
+      }
+
+      &--i:hover {
+        color: #5C3D2E;
+      }
+    }
+  }
+
+  &__copyright-text {
+    font-size: 1.2rem;
+    color: $color-grey-dark-2;
+    text-align: right;
+  }
+}
