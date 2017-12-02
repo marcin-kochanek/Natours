@@ -3,7 +3,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; /* wszystkie elementy odziedziczą wartość właściwości box-sizing po elemencie body ( border-box) */
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; /* wszystkie elementy odziedziczą wartość właściwości box-sizing po elemencie body ( border-box) */
 }
 
 html {
@@ -11,5 +12,6 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }

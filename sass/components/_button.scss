@@ -1,5 +1,6 @@
 .btn {
   font-size: 1.4rem;
+  -webkit-backface-visibility: hidden; //rozwiazuje buga z ruszajacym sie buttonem
 
   &,
   &:link,
@@ -36,8 +37,8 @@
             box-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 
     &::after {
-      -webkit-transform: scaleX(1.4) scaleY(1.6);
-              transform: scaleX(1.4) scaleY(1.6);
+      -webkit-transform: scale(1.4) scaleY(1.6);
+              transform: scale(1.4) scaleY(1.6);
       opacity: 0;
     }
   }
@@ -45,8 +46,8 @@
   &:active,
   &:focus {
     outline: none;
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
     -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, .2);
             box-shadow: 0 .5rem 1rem rgba($color-black, .2);
   }
@@ -54,6 +55,8 @@
   &--white {
     background-color: $color-white;
     color: $color-grey-dark-1;
+    -webkit-box-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+            box-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 
     &::after {
       background-color: $color-white;

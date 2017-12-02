@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-icons.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-  <title>Natours | Exciting tours for adventurous people</title>
+    <script src="foo.js"></script>
+    <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
     <header class="header">
@@ -276,30 +277,34 @@
                 </h2>
               </div>
               <form action="#" class="form">
-                <fieldset class="form__group">
-                  <input type="text" placeholder="Full name" class="form__input--text  u-margin-top-small" id="name" required>
-                  <label for="name" class="form__label--text">
-                    Full name
-                  </label>
-                  <input type="email" placeholder="E-mail address" class="form__input--text u-margin-top-small" id="email" required>
-                  <label for="email" class="form__label--text">
-                    E-mail address
-                  </label>
-                  <div class="form__group-radio">
-                    <input type="radio" class="form__input--radio" id="small" name="group-size" value="small">
-                    <label for="small" class="form__label--radio">
-                      <span class="form__button-radio"></span>
-                      Small tour group
-                    </label>
+                <fieldset>
+                  <div class="form__group">
+                    <input type="text" placeholder="Full name" class="form__input--text" id="name" required>
+                    <label for="name" class="form__label--text">Full name</label>
                   </div>
-                  <div class="form__group-radio  u-margin-top-small">
-                    <input type="radio" class="form__input--radio" id="large" name="group-size" value="large">
-                    <label for="large" class="form__label--radio">
-                      <span class="form__button-radio"></span>
-                      Large tour group
-                    </label>
+                  <div class="form__group">
+                    <input type="email" placeholder="E-mail address" class="form__input--text" id="email" required>
+                    <label for="email" class="form__label--text">E-mail address</label>
                   </div>
-                  <button class="btn btn--green u-margin-top-medium">Book now &rarr;</button>
+                  <div class="form__group">
+                    <div class="form__group-radio">
+                      <input type="radio" class="form__input--radio" id="small" name="group-size" value="small">
+                      <label for="small" class="form__label--radio">
+                        <span class="form__button-radio"></span>
+                        Small tour group
+                      </label>
+                    </div>
+                    <div class="form__group-radio">
+                      <input type="radio" class="form__input--radio" id="large" name="group-size" value="large">
+                      <label for="large" class="form__label--radio">
+                        <span class="form__button-radio"></span>
+                        Large tour group
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__group u-margin-top-medium">
+                    <button class="btn btn--green">Book now &rarr;</button>
+                  </div>
                 </fieldset>
               </form>
             </div>
