@@ -28,7 +28,7 @@
         </ul>
       </nav>
     </div>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="The logo of Natours" class="header__logo">
       </div>
@@ -37,7 +37,7 @@
           <span class="heading-primary--main" data-end="s">Outdoor</span>
           <span class="heading-primary--sub" data-end="s">is where life happen</span>
         </h1>
-        <a class="btn btn--white btn--animated" href="#">Discover our tours</a>
+        <a href="#section-booking" class="btn btn--white btn--animated">Discover our tours</a>
       </div>
     </header>
     <main>
@@ -61,7 +61,7 @@
             <p class="paragraph">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores quoda.
             </p>
-            <a href="#" class="btn-text">Learn more &rarr;</a>
+            <a href="#section-features" class="btn-text">Learn more &rarr;</a>
           </div>
           <div class="col-1-of-2">
             <div class="composition">
@@ -72,7 +72,7 @@
           </div>
         </div>
       </section>
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -158,7 +158,7 @@
                       297$
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -194,7 +194,7 @@
                       497$
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -230,14 +230,11 @@
                       $897
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="u-text-center u-margin-top-huge">
-          <a href="#" class=" btn btn--green btn--animted">Discover all tours</a>
         </div>
       </section>
       <section class="section-stories">
@@ -284,7 +281,7 @@
           <a href="#" class="btn-text">Read more stories &rarr;</a>
         </div>
       </section>
-      <section class="section-booking">
+      <section class="section-booking" id="section-booking">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -343,7 +340,7 @@
         </div>
         <div class="col-1-of-3">
           <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Big logo" class="footer__logo">
+            <a href="#header"><img src="img/logo-green-2x.png" alt="Big logo" class="footer__logo"></a>
           </div>
         </div>
         <div class="col-1-of-3">
@@ -358,5 +355,22 @@
         </div>
       </div>
     </footer>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__images">
+          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="popup__info">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">Important: please read these terms before booking!</h3>
+          <p class="popup__terms u-margin-bottom-medium">
+            Lorem ipsum dolor sit amet, quo unum soluta utamur te, cibo postea mel id. Sea ea quem eirmod, vix placerat petentium at. An pri omittam probatus delicata, eu omnis accusam fabellas cum. Sea te aeque veniam libris, mei te nibh oporteat inciderint. Fierent delicatissimi quo id, altera verear voluptua pri ea. Ne eos veritus repudiare voluptaria, aperiri accumsan sea ne, sit eu ornatus accusata. Vix ei sumo autem tollit, ea tibique inciderint eloquentiam pro. In ocurreret cotidieque mel, sea et dolores reformidans referrentur.
+          </p>
+          <a href="#section-booking" class="btn btn--green ">Book now</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
