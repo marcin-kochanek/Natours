@@ -718,7 +718,7 @@ body {
       float: right; }
   .footer__list {
     list-style: none;
-    text-align: right; }
+    text-align: center; }
   .footer__item {
     display: inline-block; }
     .footer__item:not(:last-child) {
