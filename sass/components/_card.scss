@@ -141,11 +141,7 @@
   &__call-to-action {
     text-align: center;
     width: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    @include x-y-centered;
   }
 
   &__price-box {

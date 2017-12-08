@@ -1,6 +1,5 @@
 .btn {
   font-size: 1.4rem;
-  -webkit-backface-visibility: hidden; //rozwiazuje buga z ruszajacym sie buttonem
 
   &,
   &:link,
@@ -70,6 +69,7 @@
     font-weight: 500;
     -webkit-box-shadow: .5rem 1rem 2rem rgba($color-black, .2);
             box-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    -webkit-backface-visibility: hidden; //rozwiazuje buga z ruszajacym sie buttonem
 
     &::after {
       background-color: $color-primary;
