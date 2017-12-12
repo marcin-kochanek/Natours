@@ -4,23 +4,31 @@
   padding: 2.5rem;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 1rem 4rem rgba($color-black, .4);
+  -webkit-box-shadow: 0 1rem 4rem rgba($color-black, .4);
+          box-shadow: 0 1rem 4rem rgba($color-black, .4);
+  -webkit-transition: all .3s;
   transition: all .3s;
-  
+
+  @include responsive(tab-port) {
+    padding: 1.5rem;
+  };
+
   &:hover {
-    transform: translateY(-1rem) scale(1.03);
+    -webkit-transform: translateY(-1rem) scale(1.03);
+            transform: translateY(-1rem) scale(1.03);
   }
 
   &__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba($color-primary-light, .8)), to(rgba($color-primary-dark, .8)));
     background-image: linear-gradient(to right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
     -webkit-background-clip: text;
     color: transparent;
-  }
 
-  &__text {
-
+    @include responsive(tab-port) {
+      margin: 0;
+    };
   }
 }
