@@ -22,6 +22,16 @@
     &:hover .navigation__icon::after {
       top: 1rem;
     }
+
+    @include responsive(tab-port) {
+      top: 3rem;
+      right: 3rem;
+    }
+
+    @include responsive(phone) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
 
   &__icon {
@@ -70,6 +80,16 @@
     transition: -webkit-transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45);
     transition: transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45);
     transition: transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45), -webkit-transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45);
+
+    @include responsive(tab-port) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
+
+    @include responsive(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__nav {
@@ -124,8 +144,8 @@
   }
 
   &__checkbox:checked ~ &__background {
-    -webkit-transform: scale(46);
-            transform: scale(46);
+    -webkit-transform: scale(70);
+            transform: scale(70);
   }
 
   &__checkbox:checked ~ &__nav {

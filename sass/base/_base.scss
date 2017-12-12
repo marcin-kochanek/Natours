@@ -8,10 +8,31 @@
 }
 
 html {
-  font-size: 62.5%; /* default value of 1 rem = 10px podzielone przez 16px */
+  font-size: 62.5%; /* default value of 1 rem = 10px (nastepnie 10 px podzielone przez 16px) */
+
+  @include responsive(tab-land) {
+    font-size: 56.25%; //1rem = 9px (9px/16px)
+  }
+
+  @include responsive(tab-port) {
+    font-size: 50%; //1rem = 8px (8px/16px)
+  }
+
+  @include responsive(phone) {
+    font-size: 43.75%; //1rem = 7px (7/16)
+  }
+
+  @include responsive(big-desk) {
+    font-size: 75%; //1rem = 12px
+  }
 }
 
 body {
+  padding: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+
+  @include responsive(tab-port) {
+    padding: 0;
+  }
 }

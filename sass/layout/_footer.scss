@@ -5,6 +5,11 @@
   color: $color-grey-light-1;
   letter-spacing: 1.5px;
 
+  @include responsive(tab-port) {
+    padding: 5rem 0;
+    text-align: center;
+  }
+
   &__logo-box {
     text-align: center;
     vertical-align: middle;
@@ -22,6 +27,10 @@
 
     &--social {
       float: right;
+
+      @include responsive(tab-port) {
+        float: none;
+      }
     }
   }
   &__list {
@@ -58,11 +67,19 @@
         -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
                 box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
       }
+
+      @include responsive(tab-port) {
+        font-size: 1.7rem;
+      }
     }
 
     &-social {
       font-size: 2.3rem;
       text-align: center;
+
+      @include responsive(tab-port) {
+        font-size: 4rem;
+      }
 
       &--t:hover {
         color: #4099FF;
@@ -82,5 +99,9 @@
     font-size: 1.2rem;
     color: $color-grey-dark-2;
     text-align: right;
+
+    @include responsive(tab-port) {
+      font-size: 1.3rem;
+    }
   }
 }

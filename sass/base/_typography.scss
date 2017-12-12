@@ -4,7 +4,6 @@ body {
   font-size: $default-font-size;
   line-height: 1.7;
   color: $color-grey-dark-1;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -25,6 +24,11 @@ body {
       content: attr(data-end);
       letter-spacing: 0;
     }
+
+    @include responsive(phone) {
+      font-size: 4rem;
+      letter-spacing: 1.5rem;
+    }
   }
 
   &--sub {
@@ -40,6 +44,11 @@ body {
       content: attr(data-end);
       letter-spacing: 0;
     }
+
+    @include responsive(phone) {
+      font-size: 1.5rem;
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -53,12 +62,31 @@ body {
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
+
+  @include responsive(tab-port) {
+    font-size: 3rem;
+    //padding: 0 5rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 2.5rem;
+    //padding: 0 5rem;
+  }
 }
 
 .heading-tertiary {
   font-size: $default-font-size;
   text-transform: uppercase;
   font-weight: 700;
+
+  @include responsive(tab-port) {
+    font-size: 1.8rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 1.6rem;
+    //padding: 0 5rem;
+  }
 }
 
 .paragraph {

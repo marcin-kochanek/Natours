@@ -1,4 +1,16 @@
 @charset "UTF-8";
+/* MEDIA QUERIES MANAGER
+
+0-600px:      phone
+600-900px:    tablet portrait (tab-port)
+900-1200px:   tablet landscape (tab-land)
+1200-1800px:  desktop (our normal styles are applied)
+1800px+:      big desktop (big-desk)
+
+1em = 16px
+
+ORDER: base + typography -> general layout (nav, main, footer) + grid -> page layout -> components
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -42,19 +54,34 @@
 
 html {
   font-size: 62.5%;
-  /* default value of 1 rem = 10px podzielone przez 16px */ }
+  /* default value of 1 rem = 10px (nastepnie 10 px podzielone przez 16px) */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
+  padding: 3rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -71,6 +98,10 @@ body {
     .heading-primary--main::after {
       content: attr(data-end);
       letter-spacing: 0; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 4rem;
+        letter-spacing: 1.5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -82,6 +113,10 @@ body {
     .heading-primary--sub::after {
       content: attr(data-end);
       letter-spacing: 0; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem;
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -93,11 +128,23 @@ body {
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
 
 .heading-tertiary {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700; }
+  @media (max-width: 56.25em) {
+    .heading-tertiary {
+      font-size: 1.8rem; } }
+  @media (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 1.6rem; } }
 
 .paragraph {
   font-size: 16px; }
@@ -602,8 +649,19 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 60rem;
+      padding: 0 3rem; } }
+  @media (max-width: 37.5em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 2rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
@@ -612,6 +670,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -634,6 +699,10 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 3rem;
@@ -667,6 +736,14 @@ body {
     top: -1rem; }
   .navigation__button:hover .navigation__icon::after {
     top: 1rem; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 2.5rem;
+      right: 2.5rem; } }
 
 .navigation__icon {
   position: relative;
@@ -702,6 +779,14 @@ body {
   transition: -webkit-transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45);
   transition: transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45);
   transition: transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45), -webkit-transform 0.5s cubic-bezier(0.6, -0.21, 0.35, 0.45); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__nav {
   height: 0;
@@ -749,8 +834,8 @@ body {
   transform: translateX(-2rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  -webkit-transform: scale(46);
-  transform: scale(46); }
+  -webkit-transform: scale(70);
+  transform: scale(70); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
@@ -776,6 +861,10 @@ body {
   font-size: 1.4rem;
   color: #f7f7f7;
   letter-spacing: 1.5px; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 5rem 0;
+      text-align: center; } }
   .footer__logo-box {
     text-align: center;
     vertical-align: middle; }
@@ -788,6 +877,9 @@ body {
     padding-top: .5rem; }
     .footer__navigation--social {
       float: right; }
+      @media (max-width: 56.25em) {
+        .footer__navigation--social {
+          float: none; } }
   .footer__list {
     list-style: none;
     text-align: center; }
@@ -809,9 +901,15 @@ body {
         color: #55c57a;
         -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+      @media (max-width: 56.25em) {
+        .footer__link-menu {
+          font-size: 1.7rem; } }
     .footer__link-social {
       font-size: 2.3rem;
       text-align: center; }
+      @media (max-width: 56.25em) {
+        .footer__link-social {
+          font-size: 4rem; } }
       .footer__link-social--t:hover {
         color: #4099FF; }
       .footer__link-social--fb:hover {
@@ -822,6 +920,9 @@ body {
     font-size: 1.2rem;
     color: #adaaaa;
     text-align: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright-text {
+        font-size: 1.3rem; } }
 
 .section-about {
   background-color: #f7f7f7;
