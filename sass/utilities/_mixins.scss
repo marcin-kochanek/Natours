@@ -35,7 +35,7 @@ ORDER: base + typography -> general layout (nav, main, footer) + grid -> page la
   }
 
   @if $breakpoint == ipad {
-    @media (max-width: 56.25em) { @content }; //768px
+    @media (width: 48em) { @content }; //768px
   }
 
   @if $breakpoint == tab-port {
@@ -43,7 +43,7 @@ ORDER: base + typography -> general layout (nav, main, footer) + grid -> page la
   }
 
   @if $breakpoint == ipad-pro {
-    @media (max-width: 65em) { @content }; //1024px
+    @media (width: 64em) { @content }; //1024px
   }
 
   @if $breakpoint == tab-land {
