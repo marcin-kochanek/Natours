@@ -4,6 +4,7 @@
 0-600px:      phone
 600-900px:    tablet portrait (tab-port)
 900-1200px:   tablet landscape (tab-land)
+1024x1366:    iPad Pro (ipad-pro)
 1200-1800px:  desktop (our normal styles are applied)
 1800px+:      big desktop (big-desk)
 
@@ -79,7 +80,7 @@ body {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777; }
 
@@ -130,24 +131,28 @@ body {
   color: transparent; }
   @media (max-width: 56.25em) {
     .heading-secondary {
-      font-size: 3rem; } }
+      font-size: 3rem;
+      padding: 0 3rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.5rem; } }
 
 .heading-tertiary {
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase;
-  font-weight: 700; }
-  @media (max-width: 56.25em) {
-    .heading-tertiary {
-      font-size: 1.8rem; } }
-  @media (max-width: 37.5em) {
-    .heading-tertiary {
-      font-size: 1.6rem; } }
+  font-weight: 700;
+  /*@include responsive(tab-port) {
+    font-size: 1.8rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 1.6rem;
+    //padding: 0 5rem;
+  }*/ }
 
 .paragraph {
-  font-size: 16px; }
+  font-size: 1.6rem;
+  text-align: justify; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
@@ -177,6 +182,9 @@ body {
 
 .u-margin-top-medium {
   margin-top: 4rem; }
+  @media (max-width: 56.25em) {
+    .u-margin-top-medium {
+      margin-top: 1rem; } }
 
 .u-margin-top-small {
   margin-top: 1.5rem; }
@@ -244,7 +252,7 @@ body {
     /* LIFEHACK: rozwiązanie dla pojawiającego się buttona przed rozpoczęciem animacji. Opóźnienie animacji rozpoczynie się przed jej wyświetleniem */ }
 
 .btn-text:link, .btn-text:visited {
-  font-size: 16px;
+  font-size: 1.6rem;
   display: inline-block;
   color: #55c57a;
   text-decoration: none;
@@ -327,14 +335,14 @@ body {
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
   -webkit-transition: all .3s;
   transition: all .3s; }
   @media (max-width: 56.25em) {
     .feature-box {
-      padding: 1.5rem; } }
+      padding: 3rem; } }
   .feature-box:hover {
     -webkit-transform: translateY(-1rem) scale(1.03);
     transform: translateY(-1rem) scale(1.03); }
@@ -461,26 +469,26 @@ body {
   @media (max-width: 56.25em) {
     .card {
       height: auto;
+      background-color: #fff;
+      border-radius: 5px;
       -webkit-box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
       box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15); }
       .card__side {
         height: auto;
         position: relative;
-        border-radius: 5px; }
+        -webkit-box-shadow: none;
+        box-shadow: none; }
         .card__side--back {
           -webkit-transform: rotateY(0);
           transform: rotateY(0);
           -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
-          .card__side--back-1 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7700));
-            background-image: linear-gradient(to right bottom, #ffb900, #ff7700); }
-          .card__side--back-2 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
-            background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
-          .card__side--back-3 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#402bf1));
-            background-image: linear-gradient(to right bottom, #2998ff, #402bf1); }
+      .card__heading {
+        width: 49%; }
+      .card__details {
+        padding: 0.5rem; }
+        .card__details ul {
+          width: 50%; }
       .card:hover .card__side--front {
         -webkit-transform: rotateY(0);
         transform: rotateY(0); }
@@ -490,10 +498,14 @@ body {
         position: relative;
         top: 0;
         left: 0;
+        padding: 4rem 3rem;
         -webkit-transform: translate(0);
         transform: translate(0); }
       .card__price-box {
-        margin-bottom: 2rem; } }
+        margin-bottom: 3rem; }
+      .card__price-value {
+        font-size: 5rem;
+        line-height: 1.1; } }
 
 .story {
   width: 75%;
@@ -505,17 +517,36 @@ body {
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   -webkit-transform: skewX(-12deg);
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem 6rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      -webkit-transform: skewX(0);
+      transform: skewX(0);
+      padding: 4rem;
+      padding-left: 5rem; } }
   .story__shape {
     height: 15rem;
     width: 15rem;
     float: left;
     shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     -webkit-transform: translateX(-3rem) skewX(12deg);
     transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        -webkit-transform: translateX(-3rem) skewX(0);
+        transform: translateX(-3rem) skewX(0);
+        shape-outside: circle(40% at 50% 50%);
+        -webkit-clip-path: circle(44% at 50% 50%);
+        clip-path: circle(44% at 50% 50%); } }
   .story__picture {
     height: 100%;
     -webkit-transform: translateX(-4rem) scale(1.4);
@@ -528,17 +559,15 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 20%);
+    transform: translate(-50%, 20%);
     text-transform: uppercase;
     font-size: 1.5rem;
     color: #fff;
     text-align: center;
     opacity: 0;
     -webkit-transition: all .5s;
-    transition: all .5s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    transition: all .5s; }
   .story:hover .story__caption {
     opacity: 1;
     -webkit-transform: translate(-50%, -50%);
@@ -551,6 +580,10 @@ body {
   .story__text {
     -webkit-transform: skewX(12deg);
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        -webkit-transform: skewX(0);
+        transform: skewX(0); } }
 
 .background-video {
   position: absolute;
@@ -576,6 +609,9 @@ body {
   -webkit-transform: translateZ(0); }
   .form__group:not(:last-child) {
     margin-bottom: 2rem; }
+  @media (max-width: 56.25em) {
+    .form__group:not(:last-child) {
+      margin-bottom: 0; } }
 
 .form__input--text {
   font-family: inherit;
@@ -604,6 +640,9 @@ body {
     visibility: hidden;
     -webkit-transform: translateY(-4rem);
     transform: translateY(-4rem); }
+  @media (max-width: 56.25em) {
+    .form__input--text {
+      width: 100%; } }
 
 .form__label--text {
   font-size: 1.2rem;
@@ -619,6 +658,10 @@ body {
 .form__group-radio {
   width: 40%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__group-radio {
+      width: 100%;
+      margin-bottom: 3rem; } }
 
 .form__label--radio {
   font-size: 1.6rem;
@@ -778,16 +821,20 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%); }
-  @media (max-width: 56.25em) {
-    .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 100%); } }
-  @media (max-width: 37.5em) {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  @media (max-width: 65em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media (max-width: 56.25em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 3rem;
@@ -1011,14 +1058,18 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 25rem 3rem;
   margin-top: -20vh; }
+  @media (max-width: 65em) {
+    .section-about {
+      margin-top: -10vh; } }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 25rem 0 20rem; } }
+      padding: 25rem 0rem 20rem;
+      margin-top: -15vh; } }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
@@ -1030,11 +1081,13 @@ body {
     transform: skewY(6deg); }
   @media (max-width: 56.25em) {
     .section-features {
-      padding: 10rem 0; } }
+      padding: 10rem 0; }
+      .section-features .row {
+        width: 50rem; } }
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   margin-top: -7rem; }
   @media (max-width: 56.25em) {
     .section-tours {
@@ -1048,7 +1101,7 @@ body {
       padding: 5rem 0; } }
 
 .section-booking {
-  padding: 15rem 0;
+  padding: 15rem 3rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8)));
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
   @media (max-width: 56.25em) {
@@ -1067,3 +1120,11 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%); }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%;
+        -webkit-clip-path: none;
+        clip-path: none; } }
+  @media (max-width: 75em) {
+    .book {
+      width: 100%; } }

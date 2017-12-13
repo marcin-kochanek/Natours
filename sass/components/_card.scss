@@ -162,34 +162,34 @@
   @include responsive(tab-port) {
     // FUNCTIONALITY
     height: auto;
+    background-color: $color-white;
+    border-radius: 5px;
     -webkit-box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
             box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
 
       &__side {
         height: auto;
         position: relative;
-        border-radius: 5px;
+        -webkit-box-shadow: none;
+                box-shadow: none;
 
         &--back {
           -webkit-transform: rotateY(0);
                   transform: rotateY(0);
           -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+      }
 
-          &-1 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark));
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-          }
+      &__heading {
+        width: 49%;
+      }
 
-          &-2 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary-light), to($color-primary-dark));
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-          }
+      &__details {
+        padding: 0.5rem;
 
-          &-3 {
-            background-image: -webkit-gradient(linear, left top, right bottom, from($color-tertiary-light), to($color-tertiary-dark));
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
-          }
+        ul {
+          width: 50%;
         }
       }
 
@@ -206,12 +206,18 @@
         position: relative;
         top: 0;
         left: 0;
+        padding: 4rem 3rem;
         -webkit-transform: translate(0);
                 transform: translate(0);
       }
 
       &__price-box {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      &__price-value {
+        font-size: 5rem;
+        line-height: 1.1
       }
   }
 }

@@ -1,15 +1,20 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 25rem 0;
+  padding: 25rem 3rem;
   margin-top: -20vh;
 
+  @include responsive(ipad-pro) {
+    margin-top: -10vh;
+  }
+
   @include responsive(tab-port) {
-    padding: 25rem 0 20rem;
+    padding: 25rem 0rem 20rem;
+    margin-top: -15vh;
   }
 }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   background-image:
     -webkit-gradient(
       linear,
@@ -26,22 +31,26 @@
     background-size: cover;
     -webkit-transform: skewY(-6deg);
             transform: skewY(-6deg);
+    margin-top: -7rem;
     //clip-path: polygon(0 calc(25vh - 3rem), 100% 0, 100% 100%, 0 100%);
 
     & > * {
       -webkit-transform: skewY(6deg);
               transform: skewY(6deg);
     }
-    margin-top: -7rem;
 
     @include responsive(tab-port) {
       padding: 10rem 0;
+
+      .row {
+        width: 50rem;
+      }
     }
 }
 
 .section-tours {
   background-color: $color-grey-light-1;
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   margin-top: -7rem;
 
   @include responsive(tab-port) {
@@ -59,7 +68,7 @@
 }
 
 .section-booking {
-  padding: 15rem 0;
+  padding: 15rem 3rem;
   background-image:
     -webkit-gradient(
       linear,
@@ -90,5 +99,15 @@
     background-color: rgba($color-white, 0.9);
     -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+
+    @include responsive(tab-port) {
+      width: 100%;
+      -webkit-clip-path: none;
+              clip-path: none;
+    }
+  }
+
+  @include responsive(tab-land) {
+    width: 100%;
   }
 }

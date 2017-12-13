@@ -9,17 +9,39 @@
   -webkit-transform: skewX(-12deg);
           transform: skewX(-12deg);
 
+  @include responsive(tab-port) {
+    width: 100%;
+    padding: 4rem 6rem;
+    padding-left: 7rem;
+  }
+
+  @include responsive(phone) {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+    padding: 4rem;
+    padding-left: 5rem;
+  }
+
   &__shape {
     height: 15rem;
     width: 15rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
     -webkit-transform: translateX(-3rem) skewX(12deg);
             transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include responsive(phone) {
+      -webkit-transform: translateX(-3rem) skewX(0);
+              transform: translateX(-3rem) skewX(0);
+      shape-outside: circle(40% at 50% 50%);
+      -webkit-clip-path: circle(44% at 50% 50%);
+              clip-path: circle(44% at 50% 50%);
+    }
   }
 
   &__picture {
@@ -33,7 +55,11 @@
   }
 
   &__caption {
-    @include x-y-centered;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   -webkit-transform: translate(-50%, 20%);
+           transform: translate(-50%, 20%);
     text-transform: uppercase;
     font-size: 1.5rem;
     color: $color-white;
@@ -41,8 +67,8 @@
     opacity: 0;
     -webkit-transition: all .5s;
             transition: all .5s;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden; // fix dla trzesącego sie napisu
+    //-webkit-backface-visibility: hidden;
+    //        backface-visibility: hidden; // fix dla trzesącego sie napisu
   }
 
   &:hover &__caption {
@@ -61,5 +87,10 @@
   &__text {
     -webkit-transform: skewX(12deg);
             transform: skewX(12deg);
+
+    @include responsive(phone) {
+      -webkit-transform: skewX(0);
+              transform: skewX(0);
+    }
   }
 }
