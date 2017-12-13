@@ -43,6 +43,10 @@
     width: 33.3333333%;
     float: left;
     display: table-cell;
+
+    @include responsive(tab-port) {
+      display: none;
+    }
   }
 
   &__img {
@@ -57,6 +61,11 @@
     display: table-cell;
     text-align: center;
     position: relative;
+
+    @include responsive(tab-port) {
+      width: 100%;
+      padding: 3rem 2rem;
+    }
   }
 
   &__close {
@@ -87,5 +96,10 @@
             column-gap: 4rem;
     -webkit-column-rule: 1px solid $color-grey-light-2;
             column-rule: 1px solid $color-grey-light-2;
+
+    @include responsive(tab-port) {
+      -webkit-column-count: 1;
+              column-count: 1;
+    }
   }
 }

@@ -739,6 +739,9 @@ body {
     width: 33.3333333%;
     float: left;
     display: table-cell; }
+    @media (max-width: 56.25em) {
+      .popup__images {
+        display: none; } }
   .popup__img {
     width: 100%;
     display: block; }
@@ -749,6 +752,10 @@ body {
     display: table-cell;
     text-align: center;
     position: relative; }
+    @media (max-width: 56.25em) {
+      .popup__info {
+        width: 100%;
+        padding: 3rem 2rem; } }
   .popup__close:link, .popup__close:visited {
     font-size: 2.5rem;
     text-decoration: none;
@@ -769,6 +776,10 @@ body {
     column-gap: 4rem;
     -webkit-column-rule: 1px solid #eee;
     column-rule: 1px solid #eee; }
+    @media (max-width: 56.25em) {
+      .popup__terms {
+        -webkit-column-count: 1;
+        column-count: 1; } }
 
 .row {
   max-width: 114rem;
