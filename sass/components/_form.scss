@@ -14,7 +14,7 @@
 
     @include responsive(tab-port) {
       &:not(:last-child) {
-        margin-bottom: 0;
+        margin-bottom: 1.5rem;
       }
     }
   }
@@ -77,6 +77,10 @@
     //-webkit-transition: all .7s;
     //-webkit-transition-timing-function: ease-in;
     //        transition-timing-function: ease-in;
+
+    @include responsive(tab-port) {
+      margin-top: .2rem;
+    }
   }
 
   &__group-radio {

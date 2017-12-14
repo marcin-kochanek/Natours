@@ -64,8 +64,8 @@
       &:hover,
       &:active {
         color: $color-primary;
-        -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
-                box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+        -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+                box-shadow: 0 .5rem 1rem rgba($color-black, .2);
       }
 
       @include responsive(tab-port) {
