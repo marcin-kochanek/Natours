@@ -727,7 +727,7 @@ body {
   border-radius: 50%;
   display: inline-block;
   position: absolute;
-  top: -.2rem;
+  top: -.5rem;
   left: .1rem; }
   .form__button-radio::after {
     content: "";
@@ -930,8 +930,8 @@ body {
   width: 7rem;
   border-radius: 50%;
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: 5rem;
+  right: 5rem;
   background-color: #fff;
   z-index: 300;
   text-align: center;
@@ -973,8 +973,8 @@ body {
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 5.5rem;
+  right: 5.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 100;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
