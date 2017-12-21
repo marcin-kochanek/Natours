@@ -449,14 +449,14 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7700)), url(../img/nat-5.jpg);
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7700), url(../img/nat-5.jpg); }
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7700)), url(../img/nat-5.jpeg);
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7700), url(../img/nat-5.jpeg); }
     .card__picture--2 {
-      background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../img/nat-6.jpg);
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../img/nat-6.jpeg);
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpeg); }
     .card__picture--3 {
-      background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#402bf1)), url(../img/nat-7.jpg);
-      background-image: linear-gradient(to right bottom, #2998ff, #402bf1), url(../img/nat-7.jpg); }
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#402bf1)), url(../img/nat-7.jpeg);
+      background-image: linear-gradient(to right bottom, #2998ff, #402bf1), url(../img/nat-7.jpeg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -874,8 +874,8 @@ body {
 
 .header {
   height: 95vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -889,6 +889,10 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 93vh, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 93vh, 0 100%);
   }*/ }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 75em) {
     .header {
       height: 100vh;
@@ -1141,12 +1145,15 @@ body {
 
 .section-features {
   padding: 20rem 3rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4-small.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4-small.jpeg);
   background-size: cover;
   -webkit-transform: skewY(-6deg);
   transform: skewY(-6deg);
   margin-top: -7rem; }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .section-features {
+      background-image: url(../img/nat-4.jpg); } }
   .section-features > * {
     -webkit-transform: skewY(6deg);
     transform: skewY(6deg); }
@@ -1181,11 +1188,14 @@ body {
       padding: 5rem 0; } }
 
 .book {
-  background-image: url(../img/nat-10.jpg);
+  background-image: url(../img/nat-10-small.jpeg);
   background-size: cover;
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .book {
+      background-image: url(../img/nat-10.jpg); } }
   .book__form {
     padding: 6rem;
     width: 65%;
