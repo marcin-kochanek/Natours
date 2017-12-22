@@ -1,6 +1,6 @@
 .card {
-  // FUNCTIONALITY
 
+  //FUNCTIONALITY
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -56,8 +56,7 @@
             transform: rotateY(0);
   }
 
-  // FRONT SIDE STYLING
-
+  // FRONT-SIDE STYLING
   &__picture {
     background-size: cover;
     height: 23rem;
@@ -137,7 +136,6 @@
   }
 
   // BACK SIDE STYLING
-
   &__call-to-action {
     text-align: center;
     width: 70%;
@@ -159,7 +157,10 @@
     font-weight: 200;
   }
 
-  @include responsive(tab-port) {
+  //@include responsive(tab-port)
+  @media only screen and (max-width: 48em),
+          only screen and (hover: none) {
+
     // FUNCTIONALITY
     height: auto;
     background-color: $color-white;
@@ -167,57 +168,56 @@
     -webkit-box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
             box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
 
-      &__side {
-        height: auto;
-        position: relative;
-        -webkit-box-shadow: none;
-                box-shadow: none;
+    &__side {
+      height: auto;
+      position: relative;
+      -webkit-box-shadow: none;
+              box-shadow: none;
 
-        &--back {
-          -webkit-transform: rotateY(0);
-                  transform: rotateY(0);
-          -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-        }
-      }
-
-      &__heading {
-        width: 49%;
-      }
-
-      &__details {
-        padding: .5rem;
-
-        ul {
-          width: 50%;
-        }
-      }
-
-      &:hover &__side--front {
+      &--back {
         -webkit-transform: rotateY(0);
                 transform: rotateY(0);
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       }
+    }
 
-      // BACK SIDE STYLING
+    &__heading {
+      width: 65%;
+    }
 
-      &__call-to-action {
-        text-align: center;
-        width: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 4rem 3rem;
-        -webkit-transform: translate(0);
-                transform: translate(0);
+    &__details {
+      padding: .5rem;
+
+      ul {
+        width: 65%;
       }
+    }
 
-      &__price-box {
-        margin-bottom: 3rem;
-      }
+    &:hover &__side--front {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
 
-      &__price-value {
-        font-size: 5rem;
-        line-height: 1.1
-      }
+    // BACK SIDE STYLING
+    &__call-to-action {
+      text-align: center;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 4rem 3rem;
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+      line-height: 1.1
+    }
   }
 }

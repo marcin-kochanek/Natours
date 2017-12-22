@@ -31,23 +31,23 @@ ORDER: base + typography -> general layout (nav, main, footer) + grid -> page la
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) { @content }; //600px
+    @media only screen and (max-width: 37.5em) { @content }; //600px
   }
 
   @if $breakpoint == ipad {
-    @media (width: 48em) { @content }; //768px
+    @media only screen and (width: 48em) { @content }; //768px
   }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) { @content }; //900px
+    @media only screen and (max-width: 56.25em) { @content }; //900px
   }
 
   @if $breakpoint == ipad-pro {
-    @media (width: 64em) { @content }; //1024px
+    @media only screen and (width: 64em) { @content }; //1024px
   }
 
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) { @content }; //1200px
+    @media only screen and (max-width: 75em) { @content }; //1200px
   }
 
   @if $breakpoint == big-desk {

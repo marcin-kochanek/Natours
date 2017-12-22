@@ -26,14 +26,20 @@
     height: 15rem;
     width: 15rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-            clip-path: circle(50% at 50% 50%);
     -webkit-transform: translateX(-3rem) skewX(12deg);
             transform: translateX(-3rem) skewX(12deg);
     position: relative;
     border-radius: 50%;
     overflow: hidden;
+
+    // inne rozwiązanie z zastosowaniem nowych właściowośc CSS dla nowszych wersji przeglądarek
+    @supports (-webkit-clip-path: circle(50% at 50% 50%)) or (-webkit-clip-path: circle(50% at 50% 50%)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+              clip-path: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include responsive(phone) {
       -webkit-transform: translateX(-3rem) skewX(0);

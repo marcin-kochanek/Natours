@@ -38,8 +38,24 @@
     margin-top: -7rem;
     //clip-path: polygon(0 calc(25vh - 3rem), 100% 0, 100% 100%, 0 100%);
 
-    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      background-image: url(../img/nat-4.jpg);
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+      background-image:
+        -webkit-gradient(
+          linear,
+          left top, right bottom,
+          from(rgba($color-primary-light, .8)),
+          to(rgba($color-primary-dark, .8))),
+        url(../img/nat-4.jpeg);
+      background-image:
+        linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, .8),
+          rgba($color-primary-dark, .8)),
+        url(../img/nat-4.jpeg);
+        background-size: cover;
+        -webkit-transform: skewY(-6deg);
+                transform: skewY(-6deg);
+        margin-top: -7rem;
     }
 
     & > * {
@@ -103,7 +119,7 @@
           box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
   // for HD and Retina displays OR for non-HD and Retina displays, but with resolution > 2000px
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em),
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em),
          (min-width: 125em) {
     background-image: url(../img/nat-10.jpg);
   }
