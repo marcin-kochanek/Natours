@@ -313,7 +313,7 @@
                   Start booking now
                 </h2>
               </div>
-              <form action="#" class="form">
+              <form action="POST" class="form" data-netlify="true">
                 <fieldset>
                   <div class="form__group">
                     <input type="text" placeholder="Full name" class="form__input--text" id="name" required>
@@ -339,9 +339,13 @@
                       </label>
                     </div>
                   </div>
+                  <div class="form__group">
+                    <div data-netlify-recaptcha="true"></div>
+                  </div>
                   <div class="form__group u-margin-top-medium">
                     <button class="btn btn--green">Book now &rarr;</button>
                   </div>
+
                 </fieldset>
               </form>
             </div>
